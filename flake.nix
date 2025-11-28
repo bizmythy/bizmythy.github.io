@@ -18,18 +18,6 @@
           inherit system;
         };
 
-        myHugo = pkgs.hugo.overrideAttrs (old: {
-          version = "0.149.0";
-          src = pkgs.fetchFromGitHub {
-            owner = "bizmythy";
-            repo = "hugo";
-            rev = "89ab889d76e05b0b681368f6900597f92733df7c";
-            hash = "sha256-I7FN2fLWfGbOzUxN/+25P9Cg8AQAhyr8616nfWupCR0=";
-          };
-          vendorHash = "sha256-aLlFDP6kuhRphLbkM52V8zsNpDSa0ef29fPmE9FPdDE=";
-          doCheck = false;
-        });
-
         maskWrapped = pkgs.writeShellApplication {
           name = "mask";
           runtimeInputs = [
@@ -51,7 +39,7 @@
             dart-sass
             go
             maskWrapped
-            myHugo
+            hugo
             nushell
             pandoc
             texlive.combined.scheme-small
