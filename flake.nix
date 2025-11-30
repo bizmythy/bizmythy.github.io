@@ -38,8 +38,8 @@
             # keep-sorted start
             dart-sass
             go
-            maskWrapped
             hugo
+            maskWrapped
             nushell
             pandoc
             texlive.combined.scheme-small
