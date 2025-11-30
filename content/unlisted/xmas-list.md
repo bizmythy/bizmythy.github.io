@@ -25,3 +25,6 @@ I will try and add more to this list as I get more ideas.
 - [Finspan board game](https://a.co/d/0GzkkOy)
 - [UPLIFT Advanced Comfort Flush Keypad](https://www.upliftdesk.com/advanced-comfort-flush-keypad-by-uplift-desk/?15330=11866)
   - White color
+- BluRay Movies or TV Shows
+  - Prefer 4k HDR, but normal BluRay is also great.
+  - Feel free to pick your favorite movie!
