@@ -76,10 +76,6 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
-      - name: Materialize resume PDF
-        run: |
-          cp -L resume/resume_drew_council.pdf public/resume/resume.pdf
-          test -s public/resume/resume.pdf
       - name: Cache Save
         id: cache-save
         uses: actions/cache/save@v4

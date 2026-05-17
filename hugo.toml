@@ -14,6 +14,30 @@ style = "catppuccin-mocha"
 
 [module]
 
+[[module.mounts]]
+source = "archetypes"
+target = "archetypes"
+
+[[module.mounts]]
+source = "assets"
+target = "assets"
+
+[[module.mounts]]
+source = "content"
+target = "content"
+
+[[module.mounts]]
+source = "layouts"
+target = "layouts"
+
+[[module.mounts]]
+source = "static"
+target = "static"
+
+[[module.mounts]]
+source = "resume/resume_drew_council.pdf"
+target = "content/resume/resume.pdf"
+
 [[module.imports]]
 path = "cj.rs/gohugo-asciinema"
 
