@@ -1,3 +1,6 @@
 [submodule "themes/typo"]
 	path = themes/typo
 	url = git@github.com:tomfran/typo.git
+[submodule "resume"]
+	path = resume
+	url = git@github.com:bizmythy/resume.git
