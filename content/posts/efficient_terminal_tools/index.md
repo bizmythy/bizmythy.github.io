@@ -93,16 +93,16 @@ When I speak of older tools getting a modern redesign, these are probably the pr
 
 This section is basically here to say: **stop trying to script GitHub with `curl`!**
 
-**[gh](https://github.com/cli/cli)** provides a helpful wrapper over many GitHub APIs and `git` operations. This integration allows for commands like `gh repo clone bizmythy/nixconf`, which clones based on the GitHub repo name using your preference setting for SSH/HTTP. It also lets you make queries like `gh repo list --visibility=public`:
+**[gh](https://github.com/cli/cli)** provides a helpful wrapper over many GitHub APIs and `git` operations. This integration allows for commands like `gh repo clone drew-council/nixconf`, which clones based on the GitHub repo name using your preference setting for SSH/HTTP. It also lets you make queries like `gh repo list --visibility=public`:
 
 ```
 NAME                     DESCRIPTION              INFO              UPDATED
-bizmythy/nixconf         Nix Configuration Files  public            about 1 hour ago
-bizmythy/bizmythy.gi...                           public            about 2 hours ago
-bizmythy/nixpkgs         Nix Packages collect...  public, fork      about 19 hours ago
-bizmythy/typeracer-FPGA                           public, archived  about 4 days ago
-bizmythy/hugo            The world’s fastest ...  public, fork      about 4 days ago
-bizmythy/zed             configuration for ze...  public            about 5 days ago
+drew-council/nixconf     Nix Configuration Files  public            about 1 hour ago
+drew-council/drew-cou...                           public            about 2 hours ago
+drew-council/nixpkgs     Nix Packages collect...  public, fork      about 19 hours ago
+drew-council/typeracer-FPGA                           public, archived  about 4 days ago
+drew-council/hugo        The world’s fastest ...  public, fork      about 4 days ago
+drew-council/zed         configuration for ze...  public            about 5 days ago
 ...
 ```
 
@@ -200,11 +200,13 @@ If you are working with docker images, [**dive**](https://github.com/wagoodman/d
 
 `bat` is just `cat` with syntax highlighting. I use it all the time, especially because it behaves exactly like `cat` if it detects it is being piped into another command.
 
-[^warp]: Warp Terminal is pretty cool, but it lacks a lot of the rendering features I have come to expect from my TTY and can have some compatibility issues with some TUI applications.
+\[^warp\]: Warp Terminal is pretty cool, but it lacks a lot of the rendering features I have come to expect from my TTY and can have some compatibility issues with some TUI applications.
 
-[^multithread]: A capable user of [GNU Parallel](https://www.gnu.org/software/parallel/) can make `grep` and `find` operations parallelized, which is useful in scripting. However, for most use cases, having these optimizations compiled in is very beneficial.
+\[^multithread\]: A capable user of [GNU Parallel](https://www.gnu.org/software/parallel/) can make `grep` and `find` operations parallelized, which is useful in scripting. However, for most use cases, having these optimizations compiled in is very beneficial.
 
-[^posix]:
-    Similar to `fish`, `nu` is _extremely_ not POSIX compliant, so copy-pasting or running scripts with `nu` as the interpreter are bound to fail often.
+\[^posix\]:
+Similar to `fish`, `nu` is _extremely_ not POSIX compliant, so copy-pasting or running scripts with `nu` as the interpreter are bound to fail often.
 
-    Never set a non-POSIX shell as your system's default shell. I set `nu` as the default program that launches when I start my TTY.
+```
+Never set a non-POSIX shell as your system's default shell. I set `nu` as the default program that launches when I start my TTY.
+```

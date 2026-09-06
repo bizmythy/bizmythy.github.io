@@ -1,4 +1,4 @@
-module github.com/bizmythy/bizmythy.github.io
+module github.com/drew-council/drew-council.github.io
 
 go 1.24.4
 

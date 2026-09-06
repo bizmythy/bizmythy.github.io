@@ -65,15 +65,15 @@ So, I apply the script to the package and get a chroma `nu.xml` file defining th
 
 ## compiling the fix into hugo
 
-To add this syntax highlighting to Hugo, I needed to [fork Hugo](https://github.com/bizmythy/hugo) and use `go get -u github.com/alecthomas/chroma/v2@master` to pull in the latest chroma changes.
+To add this syntax highlighting to Hugo, I needed to [fork Hugo](https://github.com/drew-council/hugo) and use `go get -u github.com/alecthomas/chroma/v2@master` to pull in the latest chroma changes.
 
-Then, I want to build this fork of Hugo for my project. I'm using **Nix Flakes** to define my development environment in a [`flake.nix` file](https://github.com/bizmythy/bizmythy.github.io/blob/main/flake.nix), and this allows me to define a new source for `pkgs.hugo`:
+Then, I want to build this fork of Hugo for my project. I'm using **Nix Flakes** to define my development environment in a [`flake.nix` file](https://github.com/drew-council/drew-council.github.io/blob/main/flake.nix), and this allows me to define a new source for `pkgs.hugo`:
 
 ```nix
 myHugo = pkgs.hugo.overrideAttrs (old: {
   version = "0.149.0";
   src = pkgs.fetchFromGitHub {
-    owner = "bizmythy";
+    owner = "drew-council";
     repo = "hugo";
     rev = "<revision>";
     hash = "<hash>";
@@ -147,8 +147,8 @@ No.
 
 **Absolutely not.**[^nu] It was fun though, and I'm very pleased with the final product.
 
-[^gha]: This is likely an incoming blog, as GitHub actions can be very messy at times. See [fasterthanlime's excellent overview of the mess we are in](https://www.youtube.com/watch?v=9qljpi5jiMQ).
+\[^gha\]: This is likely an incoming blog, as GitHub actions can be very messy at times. See [fasterthanlime's excellent overview of the mess we are in](https://www.youtube.com/watch?v=9qljpi5jiMQ).
 
-[^cachix]: In all honesty, this addition was mostly an excuse for me to try out Cachix in a real use case. Overall, I have found it very pleasant to use.
+\[^cachix\]: In all honesty, this addition was mostly an excuse for me to try out Cachix in a real use case. Overall, I have found it very pleasant to use.
 
-[^nu]: I do plan on blogging about nushell in the future, so I guess it isn't fully useless.
+\[^nu\]: I do plan on blogging about nushell in the future, so I guess it isn't fully useless.

@@ -3,4 +3,4 @@
 	url = git@github.com:tomfran/typo.git
 [submodule "resume"]
 	path = resume
-	url = git@github.com:bizmythy/resume.git
+	url = git@github.com:drew-council/resume.git
